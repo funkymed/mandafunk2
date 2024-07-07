@@ -103,7 +103,7 @@ export class TSCustomNodeWidget extends React.Component<
             </PortWidget>
           </div>
         </Grid>
-        <Grid xs={9} style={{ textAlign: "center" }}>
+        <Grid xs={8} style={{ textAlign: "center" }}>
           {this.props.node.name}
 
           <div>
@@ -120,7 +120,7 @@ export class TSCustomNodeWidget extends React.Component<
             </Select>
           </div>
         </Grid>
-        <Grid xs={1}>
+        <Grid xs={2}>
           <IconButton size="small" style={{ right: 3, top: -5 }}>
             <HighlightOff style={{ color: "#FFFFFF55" }} />
           </IconButton>
@@ -128,7 +128,42 @@ export class TSCustomNodeWidget extends React.Component<
             engine={this.props.engine}
             port={this.props.node.getPorts()["out"]}
           >
-            <div className="circle-port-out" />
+            <span
+              className="label"
+              style={{ display: "ruby-text", textAlign: "right" }}
+            >
+              output
+              <br />
+              <div className="circle-port-out" />
+            </span>
+          </PortWidget>
+
+          <PortWidget
+            engine={this.props.engine}
+            port={this.props.node.getPorts()["out"]}
+          >
+            <span
+              className="label"
+              style={{ display: "ruby-text", textAlign: "right" }}
+            >
+              output
+              <br />
+              <div className="circle-port-out" />
+            </span>
+          </PortWidget>
+
+          <PortWidget
+            engine={this.props.engine}
+            port={this.props.node.getPorts()["out"]}
+          >
+            <span
+              className="label"
+              style={{ display: "ruby-text", textAlign: "right" }}
+            >
+              output
+              <br />
+              <div className="circle-port-out" />
+            </span>
           </PortWidget>
         </Grid>
       </Grid>
